@@ -30,25 +30,25 @@ describe('Security Class', () => {
 	}
 	
 	for (let i = 0; i <= (testPeople.length - 1); i++) {
-		countSecurityNumb += testPeople[i].police.length
+		countSecurityNumb += testPeople[i].security.length
 	}
 
-	// test('has a pet', () => {
-	// 	expect(testPerson1.pet).toBe(true);
-	// })
+	test('has a pet', () => {
+		expect(testPerson1.pet).toBe(true);
+	})
 
-	// test('has a gun', () => {
-	// 	expect(testPerson1.gun).toBe(true);
-	// })
+	test('has a gun', () => {
+		expect(testPerson1.gun).toBe(true);
+	})
 
-	// test('security is Tsa', () => {
-	// 	expect(testPerson2.isWhatRole()).toBe(true)
-	// })
+	test('security is Tsa', () => {
+		expect(testPerson2.isWhatRole()).toBe(true)
+	})
 
-	// test('is police', () => {
-	// 	expect(testPerson1.isWhatRole()).toBe(true)
-	// 	expect(testPerson2.isWhatRole()).toBe(false)
-	// })
+	test('is police', () => {
+		expect(testPerson1.isWhatRole()).toBe(true)
+		expect(testPerson2.isWhatRole()).toBe(false)
+	})
 	
 	test ('add to police', () => {
 		// testPerson1.addPolice(); 
@@ -59,8 +59,8 @@ describe('Security Class', () => {
 
 	test("number of the securities",()=>{
 
-		// console.log(`police: ${countPoliceNumb}, security: ${countSecurityNumb}, tsa: ${countTsaNumb}, security: ${testPerson1}`)
-		console.log(testPerson1.security)
+		console.log(`police: ${countPoliceNumb}, security: ${countSecurityNumb}, tsa: ${countTsaNumb}, security: ${testPerson1}`)
+		// console.log(testPerson1.security)
 		
 		expect()
 	})
