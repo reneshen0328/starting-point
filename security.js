@@ -4,31 +4,39 @@ class Security {
         this.pet = pet
         this.gun = gun
         this.police = []
+        this.tsa = []
+        this.security=[]
 	}
 
-    isTsa(){
-        if ((this.pet == false|| this.pet == undefined) && (this.gun == false|| this.gun == undefined)) {
-            return true
-        } else { 
-            return false
-        }
-    }
+    // isTsa(){
+    //     if ((this.pet == false|| this.pet == undefined) && (this.gun == false|| this.gun == undefined)) {
+    //         return true
+    //     } else { 
+    //         return false
+    //     }
+    // }
     
-	isPolice(){
+	isWhatRole(){
 		if ((this.gun == true) && (this.pet == true)){
-            return true
+            return "is Police"
+        } else  if ((this.pet == false|| this.pet == undefined) && (this.gun == false|| this.gun == undefined)){
+            return "is TSA"
         } else {
-            return false
+            return "is Security"
         }
 	}
 
     addPolice(){
-        if(this.isPolice()==true){
+        if(this.isWhatRole() == "is Police"){
             this.police.push(this.name);
             return this.police;
-        } else{
-            return "This is not a Police officer :("
-        }
+        } else if(this.isWhatRole() == "is TSA"){
+            this.tsa.push(this.name);
+            return this.tsa;
+        } else {
+			 this.security.push(this.name);
+			 return this.security; 
+		  }
     }
 }
 
